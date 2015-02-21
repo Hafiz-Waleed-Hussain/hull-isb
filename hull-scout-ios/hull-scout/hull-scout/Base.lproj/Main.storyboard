@@ -1,25 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N6C-4E-LNx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Welcome-->
+        <scene sceneID="AnY-Yg-kHV">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <navigationController title="Welcome" id="N6C-4E-LNx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aUb-Lt-yxa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NDY-xi-aIA" kind="relationship" relationship="rootViewController" id="nUJ-2B-s5b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZO-el-q3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="459" y="382"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6aN-q3-qFQ">
+            <objects>
+                <viewController id="NDY-xi-aIA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pa6-Ni-nfQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8b2-Q1-Mnl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fOn-Jy-RfN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc8-bC-vHj">
+                                <rect key="frame" x="231" y="285" width="139" height="30"/>
+                                <state key="normal" title="Login with facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vc8-bC-vHj" secondAttribute="trailing" constant="214" id="Jrn-9K-7uV"/>
+                            <constraint firstItem="8b2-Q1-Mnl" firstAttribute="top" secondItem="Vc8-bC-vHj" secondAttribute="bottom" constant="285" id="RjR-9k-8ty"/>
+                            <constraint firstItem="Vc8-bC-vHj" firstAttribute="leading" secondItem="fOn-Jy-RfN" secondAttribute="leadingMargin" constant="215" id="nj2-RC-6tS"/>
+                            <constraint firstItem="Vc8-bC-vHj" firstAttribute="top" secondItem="Pa6-Ni-nfQ" secondAttribute="bottom" constant="221" id="szW-Ei-QBY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RBc-2b-3PS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZw-m4-LnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1226" y="388"/>
         </scene>
     </scenes>
 </document>
