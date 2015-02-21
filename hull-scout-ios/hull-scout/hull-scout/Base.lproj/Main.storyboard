@@ -23,7 +23,7 @@
         <!--Login-->
         <scene sceneID="6aN-q3-qFQ">
             <objects>
-                <viewController title="Login" id="NDY-xi-aIA" sceneMemberID="viewController">
+                <viewController title="Login" id="NDY-xi-aIA" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pa6-Ni-nfQ"/>
                         <viewControllerLayoutGuide type="bottom" id="8b2-Q1-Mnl"/>
@@ -38,7 +38,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hKM-YX-fPv" kind="show" id="eRC-Am-DA6"/>
+                                    <action selector="loginFacebook:" destination="NDY-xi-aIA" eventType="touchUpInside" id="059-0y-I5G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,6 +61,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="RBc-2b-3PS"/>
+                    <connections>
+                        <outlet property="loginButton" destination="25v-kW-TFP" id="azA-xQ-es8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZw-m4-LnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
