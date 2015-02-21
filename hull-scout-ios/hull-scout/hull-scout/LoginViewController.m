@@ -61,8 +61,9 @@
                     
                     [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                         if(succeeded){
-                            //jump to next screen.
-                            NSLog(@"User created for hull successfully");
+                            
+                            [self goToProfile];
+                            
                         }else{
                             NSLog(@"Could not publish user to hull");
                         }
@@ -72,15 +73,15 @@
                     NSLog(@"Problem getting user info");
                 }
             }];
+
             
-            
-            NSLog(@"User signed up and logged in through Facebook!");
         } else {
-            NSLog(@"User logged in through Facebook!");
-            
-            
-            //segue to home screen.
+            [self goToProfile];
         }
     }];
+}
+
+- (void) goToProfile{
+    [self performSegueWithIdentifier:@"toProfile" sender:self];
 }
 @end

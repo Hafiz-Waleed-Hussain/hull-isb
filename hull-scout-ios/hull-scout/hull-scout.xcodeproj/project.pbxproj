@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505B91A71A98C47D00CBC00D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505B91A61A98C47D00CBC00D /* MapKit.framework */; };
+		505B91AA1A98C85400CBC00D /* AddNewMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B91A91A98C85400CBC00D /* AddNewMissionViewController.m */; };
 		50CEB5BC1A988D5700C920AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CEB5BB1A988D5700C920AA /* main.m */; };
 		50CEB5BF1A988D5800C920AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CEB5BE1A988D5700C920AA /* AppDelegate.m */; };
 		50CEB5C51A988D5800C920AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CEB5C31A988D5800C920AA /* Main.storyboard */; };
@@ -28,6 +30,7 @@
 		50CEB5F91A9898C700C920AA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CEB5F81A9898C700C920AA /* libsqlite3.dylib */; };
 		50CEB5FC1A9899A700C920AA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CEB5FB1A9899A700C920AA /* LoginViewController.m */; };
 		50CEB5FE1A989B9A00C920AA /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CEB5FD1A989B9A00C920AA /* ParseFacebookUtils.framework */; };
+		50CEB6021A98AA9100C920AA /* HomeProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CEB6011A98AA9100C920AA /* HomeProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		505B91A61A98C47D00CBC00D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		505B91A81A98C85400CBC00D /* AddNewMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewMissionViewController.h; sourceTree = "<group>"; };
+		505B91A91A98C85400CBC00D /* AddNewMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewMissionViewController.m; sourceTree = "<group>"; };
 		50CEB5B61A988D5700C920AA /* hull-scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hull-scout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CEB5BA1A988D5700C920AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50CEB5BB1A988D5700C920AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +74,8 @@
 		50CEB5FA1A9899A700C920AA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		50CEB5FB1A9899A700C920AA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		50CEB5FD1A989B9A00C920AA /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		50CEB6001A98AA9100C920AA /* HomeProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeProfileViewController.h; sourceTree = "<group>"; };
+		50CEB6011A98AA9100C920AA /* HomeProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505B91A71A98C47D00CBC00D /* MapKit.framework in Frameworks */,
 				50CEB5FE1A989B9A00C920AA /* ParseFacebookUtils.framework in Frameworks */,
 				50CEB5F91A9898C700C920AA /* libsqlite3.dylib in Frameworks */,
 				50CEB5F71A9898C000C920AA /* libz.dylib in Frameworks */,
@@ -105,20 +114,7 @@
 		50CEB5AD1A988D5700C920AA = {
 			isa = PBXGroup;
 			children = (
-				50CEB5FD1A989B9A00C920AA /* ParseFacebookUtils.framework */,
-				50CEB5F81A9898C700C920AA /* libsqlite3.dylib */,
-				50CEB5F61A9898C000C920AA /* libz.dylib */,
-				50CEB5F41A9898B700C920AA /* SystemConfiguration.framework */,
-				50CEB5F21A9898B200C920AA /* StoreKit.framework */,
-				50CEB5F01A9898AC00C920AA /* Security.framework */,
-				50CEB5EE1A9898A600C920AA /* QuartzCore.framework */,
-				50CEB5EC1A98989D00C920AA /* MobileCoreServices.framework */,
-				50CEB5EA1A98985B00C920AA /* CoreLocation.framework */,
-				50CEB5E81A98985400C920AA /* CoreGraphics.framework */,
-				50CEB5E61A98984E00C920AA /* CFNetwork.framework */,
-				50CEB5E41A98984800C920AA /* AudioToolbox.framework */,
-				50CEB5E21A98983500C920AA /* Parse.framework */,
-				50CEB5E01A98960B00C920AA /* FacebookSDK.framework */,
+				50CEB5FF1A98AA7700C920AA /* Frameworks */,
 				50CEB5B81A988D5700C920AA /* hull-scout */,
 				50CEB5D21A988D5800C920AA /* hull-scoutTests */,
 				50CEB5B71A988D5700C920AA /* Products */,
@@ -179,8 +175,34 @@
 			children = (
 				50CEB5FA1A9899A700C920AA /* LoginViewController.h */,
 				50CEB5FB1A9899A700C920AA /* LoginViewController.m */,
+				50CEB6001A98AA9100C920AA /* HomeProfileViewController.h */,
+				50CEB6011A98AA9100C920AA /* HomeProfileViewController.m */,
+				505B91A81A98C85400CBC00D /* AddNewMissionViewController.h */,
+				505B91A91A98C85400CBC00D /* AddNewMissionViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		50CEB5FF1A98AA7700C920AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				505B91A61A98C47D00CBC00D /* MapKit.framework */,
+				50CEB5FD1A989B9A00C920AA /* ParseFacebookUtils.framework */,
+				50CEB5F81A9898C700C920AA /* libsqlite3.dylib */,
+				50CEB5F61A9898C000C920AA /* libz.dylib */,
+				50CEB5F41A9898B700C920AA /* SystemConfiguration.framework */,
+				50CEB5F21A9898B200C920AA /* StoreKit.framework */,
+				50CEB5F01A9898AC00C920AA /* Security.framework */,
+				50CEB5EE1A9898A600C920AA /* QuartzCore.framework */,
+				50CEB5EC1A98989D00C920AA /* MobileCoreServices.framework */,
+				50CEB5EA1A98985B00C920AA /* CoreLocation.framework */,
+				50CEB5E81A98985400C920AA /* CoreGraphics.framework */,
+				50CEB5E61A98984E00C920AA /* CFNetwork.framework */,
+				50CEB5E41A98984800C920AA /* AudioToolbox.framework */,
+				50CEB5E21A98983500C920AA /* Parse.framework */,
+				50CEB5E01A98960B00C920AA /* FacebookSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,9 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505B91AA1A98C85400CBC00D /* AddNewMissionViewController.m in Sources */,
 				50CEB5BF1A988D5800C920AA /* AppDelegate.m in Sources */,
 				50CEB5BC1A988D5700C920AA /* main.m in Sources */,
 				50CEB5FC1A9899A700C920AA /* LoginViewController.m in Sources */,
+				50CEB6021A98AA9100C920AA /* HomeProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +439,7 @@
 				INFOPLIST_FILE = "hull-scout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -430,6 +455,7 @@
 				INFOPLIST_FILE = "hull-scout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -486,6 +512,7 @@
 				50CEB5DB1A988D5800C920AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50CEB5DC1A988D5800C920AA /* Build configuration list for PBXNativeTarget "hull-scoutTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +521,7 @@
 				50CEB5DE1A988D5800C920AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

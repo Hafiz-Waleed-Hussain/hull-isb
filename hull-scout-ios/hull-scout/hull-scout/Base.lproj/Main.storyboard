@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N6C-4E-LNx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Welcome-->
@@ -18,7 +19,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZO-el-q3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="382"/>
+            <point key="canvasLocation" x="283.5" y="388"/>
         </scene>
         <!--Login-->
         <scene sceneID="6aN-q3-qFQ">
@@ -32,9 +33,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc8-bC-vHj">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc8-bC-vHj">
                                 <rect key="frame" x="231" y="285" width="139" height="30"/>
-                                <state key="normal" title="Login with facebook">
+                                <state key="normal" title="Login with Facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -63,6 +64,7 @@
                     <navigationItem key="navigationItem" id="RBc-2b-3PS"/>
                     <connections>
                         <outlet property="loginButton" destination="25v-kW-TFP" id="azA-xQ-es8"/>
+                        <segue destination="hKM-YX-fPv" kind="show" identifier="toProfile" id="cAV-wF-Mfr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZw-m4-LnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -72,7 +74,7 @@
         <!--HomeProfile-->
         <scene sceneID="R5J-0b-tJj">
             <objects>
-                <viewController title="HomeProfile" id="hKM-YX-fPv" sceneMemberID="viewController">
+                <viewController title="HomeProfile" id="hKM-YX-fPv" customClass="HomeProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aE9-FL-9K3"/>
                         <viewControllerLayoutGuide type="bottom" id="lEo-4g-VZC"/>
@@ -81,7 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1V-qN-S6Q">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1V-qN-S6Q">
                                 <rect key="frame" x="93" y="168" width="85" height="30"/>
                                 <state key="normal" title="Add mission">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -112,12 +114,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6i-KJ-QFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2052" y="410"/>
+            <point key="canvasLocation" x="2115" y="388"/>
         </scene>
         <!--AddMission-->
         <scene sceneID="ga0-Xu-JK1">
             <objects>
-                <viewController title="AddMission" id="51Z-PS-fXQ" sceneMemberID="viewController">
+                <viewController title="AddMission" id="51Z-PS-fXQ" customClass="AddNewMissionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IB5-eq-dXO"/>
                         <viewControllerLayoutGuide type="bottom" id="fLb-fm-Tas"/>
@@ -126,38 +128,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca1-MZ-191">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca1-MZ-191">
                                 <rect key="frame" x="50" y="134" width="32" height="30"/>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="184" y="365" width="32" height="30"/>
+                                </variation>
                                 <connections>
-                                    <segue destination="mY0-gG-cGP" kind="show" id="nk5-3i-pLm"/>
+                                    <segue destination="Zzc-eY-frq" kind="show" id="p2Q-TE-Alr"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vob-y7-zXN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="NNE-Pb-0th"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NNE-Pb-0th"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="137" width="400" height="128"/>
+                                    <mask key="constraints">
+                                        <include reference="NNE-Pb-0th"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mission title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Skn-wa-QhM">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="16" y="87" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uba-89-MIP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="273" width="400" height="62"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="ca1-MZ-191" secondAttribute="centerY" id="b6M-vo-82A"/>
-                            <constraint firstAttribute="centerX" secondItem="ca1-MZ-191" secondAttribute="centerX" id="ruo-gK-GYw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vob-y7-zXN" secondAttribute="trailing" constant="-16" id="3eQ-Wg-KyI"/>
+                            <constraint firstItem="Skn-wa-QhM" firstAttribute="leading" secondItem="4sD-xk-8QR" secondAttribute="leadingMargin" id="3tx-pa-bOJ"/>
+                            <constraint firstItem="Skn-wa-QhM" firstAttribute="trailing" secondItem="4sD-xk-8QR" secondAttribute="trailingMargin" id="BAo-ZP-uR7"/>
+                            <constraint firstItem="Skn-wa-QhM" firstAttribute="top" secondItem="IB5-eq-dXO" secondAttribute="bottom" constant="23" id="M9K-Ib-2WM"/>
+                            <constraint firstItem="vob-y7-zXN" firstAttribute="top" secondItem="Skn-wa-QhM" secondAttribute="bottom" constant="20" id="cq8-wm-b5o"/>
+                            <constraint firstItem="vob-y7-zXN" firstAttribute="leading" secondItem="4sD-xk-8QR" secondAttribute="leadingMargin" constant="-16" id="lNi-Gj-3TM"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vob-y7-zXN"/>
+                                <exclude reference="Skn-wa-QhM"/>
+                                <exclude reference="Uba-89-MIP"/>
+                            </mask>
                             <mask key="constraints">
-                                <exclude reference="b6M-vo-82A"/>
-                                <exclude reference="ruo-gK-GYw"/>
+                                <exclude reference="3tx-pa-bOJ"/>
+                                <exclude reference="BAo-ZP-uR7"/>
+                                <exclude reference="M9K-Ib-2WM"/>
+                                <exclude reference="3eQ-Wg-KyI"/>
+                                <exclude reference="cq8-wm-b5o"/>
+                                <exclude reference="lNi-Gj-3TM"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vob-y7-zXN"/>
+                                <include reference="Skn-wa-QhM"/>
+                                <include reference="Uba-89-MIP"/>
+                            </mask>
                             <mask key="constraints">
-                                <include reference="b6M-vo-82A"/>
-                                <include reference="ruo-gK-GYw"/>
+                                <include reference="3tx-pa-bOJ"/>
+                                <include reference="BAo-ZP-uR7"/>
+                                <include reference="M9K-Ib-2WM"/>
+                                <include reference="3eQ-Wg-KyI"/>
+                                <include reference="cq8-wm-b5o"/>
+                                <include reference="lNi-Gj-3TM"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="categoryView" destination="Uba-89-MIP" id="uUh-eT-OdC"/>
+                        <outlet property="mapView" destination="vob-y7-zXN" id="hy0-mz-kfC"/>
+                        <outlet property="title" destination="Skn-wa-QhM" id="xlo-of-moO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAc-FM-rtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826" y="388"/>
+            <point key="canvasLocation" x="3004.5" y="388"/>
         </scene>
         <!--MissionDetail-->
         <scene sceneID="sMU-Kn-2ZG">
@@ -179,9 +245,6 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="182" y="285" width="37" height="30"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="Zzc-eY-frq" kind="show" id="cpS-tF-Gmk"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -189,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWj-9e-b5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3617" y="415"/>
+            <point key="canvasLocation" x="3811.5" y="935"/>
         </scene>
         <!--Sharing-->
         <scene sceneID="P4M-aW-SAu">
@@ -239,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfu-0v-7YJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4391" y="415"/>
+            <point key="canvasLocation" x="4647" y="388"/>
         </scene>
         <!--Advertisment-->
         <scene sceneID="jWJ-we-Ckc">
@@ -277,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H82-Ak-qtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5179" y="410"/>
+            <point key="canvasLocation" x="5538" y="388"/>
         </scene>
     </scenes>
 </document>
