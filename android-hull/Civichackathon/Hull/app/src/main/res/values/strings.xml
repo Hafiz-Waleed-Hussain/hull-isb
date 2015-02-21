@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Hull</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="features">FEATURES</string>
+
+    <string-array name="feature_icons">
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+
+    </string-array>
+
+    <string-array name="feature_array">
+        <item>Feature 1</item>
+        <item>Feature 2</item>
+        <item>Feature 3</item>
+        <item>Feature 4</item>
+    </string-array>
+
+    <string-array name="fragments">
+        <item>com.highndry.hull.fragments.HomeFragment_</item>
+        <item>com.highndry.hull.fragments.HomeFragment_</item>
+        <item>com.highndry.hull.fragments.HomeFragment_</item>
+        <item>com.highndry.hull.fragments.HomeFragment_</item>
+    </string-array>
+
+</resources>
