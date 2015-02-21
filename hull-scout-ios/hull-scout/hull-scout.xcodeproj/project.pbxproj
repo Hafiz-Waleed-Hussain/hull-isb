@@ -81,6 +81,7 @@
 		50CEB5B81A988D5700C920AA /* hull-scout */ = {
 			isa = PBXGroup;
 			children = (
+				50CEB5DF1A9892ED00C920AA /* View Controllers */,
 				50CEB5BD1A988D5700C920AA /* AppDelegate.h */,
 				50CEB5BE1A988D5700C920AA /* AppDelegate.m */,
 				50CEB5C01A988D5800C920AA /* ViewController.h */,
@@ -117,6 +118,13 @@
 				50CEB5D41A988D5800C920AA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50CEB5DF1A9892ED00C920AA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3264F5AD-4EC0-4EFF-AF84-3E979CDD209C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>hull-scout</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CCD25759FA1D3D7DBF218B91C76B0E1FEF7F2048</key>
+		<string>https://github.com/codeforpakistan/hull-isb.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>hull-scout-ios/hull-scout/hull-scout.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CCD25759FA1D3D7DBF218B91C76B0E1FEF7F2048</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/codeforpakistan/hull-isb.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CCD25759FA1D3D7DBF218B91C76B0E1FEF7F2048</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CCD25759FA1D3D7DBF218B91C76B0E1FEF7F2048</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hull-isb</string>
+		</dict>
+	</array>
+</dict>
+</plist>
