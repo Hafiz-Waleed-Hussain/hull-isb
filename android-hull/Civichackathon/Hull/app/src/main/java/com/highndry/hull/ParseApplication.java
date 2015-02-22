@@ -5,6 +5,7 @@ import android.app.Application;
 import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseCrashReporting;
+import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
 
 public class ParseApplication extends Application {
@@ -24,6 +25,7 @@ public class ParseApplication extends Application {
 
     // Add your initialization code here
     Parse.initialize(this, YOUR_APPLICATION_ID, YOUR_CLIENT_KEY);
+    ParseFacebookUtils.initialize("1538230953124230");
 
 
     ParseUser.enableAutomaticUser();

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/ic_pattern_hul"
+    android:src="@color/toolbar_color"
     android:dither="true"
     android:tileMode="repeat" />

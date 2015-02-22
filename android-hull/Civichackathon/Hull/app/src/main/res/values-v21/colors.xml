@@ -11,4 +11,17 @@
 
     <color name="tta_blue_dark">#ff124680</color>
 
+
+    <color name="toolbar_color">#27ae60</color>
+    <color name="tab_select_color">#27ae60</color>
+    <color name="tab_background">#34495e</color>
+
+
+    <color name="item_one">#e9e7e7</color>
+    <color name="item_two">#aab6b7</color>
+
+
+    <color name="item_one_text">#27ae60</color>
+    <color name="item_two_text">#2b3e4f</color>
+
 </resources>

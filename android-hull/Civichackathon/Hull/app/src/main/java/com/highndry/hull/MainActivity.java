@@ -15,11 +15,18 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.facebook.Request;
+import com.facebook.Response;
+import com.facebook.model.GraphUser;
 import com.highndry.hull.adapters.CustomDrawerAdapter;
+import com.parse.ParseFacebookUtils;
+import com.pkmmte.view.CircularImageView;
+import com.squareup.picasso.Picasso;
 
 import org.androidannotations.annotations.EActivity;
 
@@ -29,6 +36,7 @@ public class MainActivity extends ActionBarActivity  {
     private Toolbar mToolBar;
     private DrawerLayout mDrawerLayout;
     private TextView mTitle;
+    private CircularImageView profilePicture;
 
     ActionBarDrawerToggle actionBarDrawerToggle;
     private ListView mListView;
@@ -37,8 +45,8 @@ public class MainActivity extends ActionBarActivity  {
     private TypedArray mFeatureIcons;
     private String[] fragments;
 
-    private CharSequence mDrawerTitle;
-    private CharSequence mToolBarTitle;
+    //private CharSequence mDrawerTitle;
+    //private CharSequence mToolBarTitle;
 
 
 
@@ -67,15 +75,16 @@ public class MainActivity extends ActionBarActivity  {
         mDrawerRelativeLayout = (RelativeLayout) findViewById(R.id.left_drawer_relative);
         mToolBar = (Toolbar) findViewById(R.id.toolbar);
         mListView = (ListView)findViewById(R.id.left_drawer);
-        mTitle = (TextView) mToolBar.findViewById(R.id.toolbar_title);
+        //mTitle = (TextView) mToolBar.findViewById(R.id.toolbar_title);
+        profilePicture = (CircularImageView) mToolBar.findViewById(R.id.profilePicture);
 
-        mToolBarTitle = mDrawerTitle = mTitle.getText().toString();
+        //mToolBarTitle = mDrawerTitle = mTitle.getText().toString();
 
         mFeatureTitles = getResources().getStringArray(R.array.feature_array);
         mFeatureIcons = getResources().obtainTypedArray(R.array.feature_icons);
         fragments = getResources().getStringArray(R.array.fragments);
 
-        mDrawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.orange_700));
+        //mDrawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.orange_700));
         actionBarDrawerToggle = new ActionBarDrawerToggle(
                 this,
                 mDrawerLayout,
@@ -90,7 +99,7 @@ public class MainActivity extends ActionBarActivity  {
                 super.onDrawerClosed(view);
                 invalidateOptionsMenu();
                 syncState();
-                mTitle.setText(mToolBarTitle);
+                //mTitle.setText(mToolBarTitle);
             }
 
             public void onDrawerOpened(View drawerView)
@@ -98,7 +107,7 @@ public class MainActivity extends ActionBarActivity  {
                 super.onDrawerOpened(drawerView);
                 invalidateOptionsMenu();
                 syncState();
-                mTitle.setText(mDrawerTitle);
+                //mTitle.setText(mDrawerTitle);
             }
         };
 
@@ -119,22 +128,23 @@ public class MainActivity extends ActionBarActivity  {
         getSupportActionBar().setDisplayOptions(getSupportActionBar().getDisplayOptions() ^ ActionBar.DISPLAY_SHOW_TITLE);
 
 
+        makeMeRequest();
 
 
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main, menu);
         return super.onCreateOptionsMenu(menu);
-    }
+    }*/
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
-        boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerRelativeLayout);
-        menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
+        //boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerRelativeLayout);
+        //menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -144,16 +154,18 @@ public class MainActivity extends ActionBarActivity  {
         // ActionBarDrawerToggle will take care of this.
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
+        }else {
+            return super.onOptionsItemSelected(item);
         }
         // Handle action buttons
-        switch(item.getItemId()) {
+        /*switch(item.getItemId()) {
             case R.id.action_websearch:
                 // blah bluh bleh
 
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-        }
+        }*/
     }
 
 
@@ -169,7 +181,7 @@ public class MainActivity extends ActionBarActivity  {
     private void selectItem(final int position) {
 
         // update the main content by replacing fragments
-        if(position == 0 || position == 3){
+       /* if(position == 0 || position == 3){
 
             Bundle args = new Bundle();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -179,14 +191,32 @@ public class MainActivity extends ActionBarActivity  {
             // update selected item and title, then close the drawer
             mListView.setItemChecked(position, true);
             //setTitle(mFeatureTitles[position]);
-            mToolBarTitle = mFeatureTitles[position];
-            mTitle.setText(mToolBarTitle);
+            //mToolBarTitle = mFeatureTitles[position];
+            //mTitle.setText(mToolBarTitle);
             mDrawerLayout.closeDrawer(mDrawerRelativeLayout);
 
 
         }else {
             mDrawerLayout.closeDrawer(mDrawerRelativeLayout);
+        }*/
+
+        if(position == 5){
+            mDrawerLayout.closeDrawer(mDrawerRelativeLayout);
+        }else {
+            Bundle args = new Bundle();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.content_frame, Fragment.instantiate(MainActivity.this, fragments[position], args));
+            fragmentTransaction.commit();
+
+            // update selected item and title, then close the drawer
+            mListView.setItemChecked(position, true);
+            //setTitle(mFeatureTitles[position]);
+            //mToolBarTitle = mFeatureTitles[position];
+            //mTitle.setText(mToolBarTitle);
+            mDrawerLayout.closeDrawer(mDrawerRelativeLayout);
         }
+
+
 
     }
 
@@ -204,6 +234,60 @@ public class MainActivity extends ActionBarActivity  {
         // Pass any configuration change to the drawer toggles
         actionBarDrawerToggle.onConfigurationChanged(newConfig);
 
+    }
+
+    private void makeMeRequest() {
+        Request request = Request.newMeRequest(ParseFacebookUtils.getSession(),
+                new Request.GraphUserCallback() {
+                    @Override
+                    public void onCompleted(final GraphUser user, Response response) {
+                        if (user != null) {
+
+
+                            Picasso.with(MainActivity.this)
+                                    .load("http://graph.facebook.com/" + user.getId() + "/picture?type=large")
+                                    .placeholder(R.drawable.ic_profile_picture)
+                                    .error(R.drawable.ic_profile_picture)
+                                    .into(profilePicture);
+
+                            /*AsyncTask<Void, Void, Bitmap> t = new AsyncTask<Void, Void, Bitmap>() {
+                                protected Bitmap doInBackground(Void... p) {
+                                    Bitmap bm = null;
+                                    try {
+                                        URL aURL = new URL("http://graph.facebook.com/" + user.getId() + "/picture?type=large");
+                                        URLConnection conn = aURL.openConnection();
+                                        conn.setUseCaches(true);
+                                        conn.connect();
+                                        InputStream is = conn.getInputStream();
+                                        BufferedInputStream bis = new BufferedInputStream(is);
+                                        bm = BitmapFactory.decodeStream(bis);
+                                        bis.close();
+                                        is.close();
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                    return bm;
+                                }
+
+                                protected void onPostExecute(Bitmap bm) {
+
+                                    *//*Drawable drawable = new BitmapDrawable(getResources(), bm);
+
+                                    photoImageView.setBackgroundDrawable(drawable);
+
+                                    Picasso*//*
+
+                                }
+                            };
+                            t.execute();*/
+
+
+                        } else if (response.getError() != null) {
+                            // handle error
+                        }
+                    }
+                });
+        request.executeAsync();
     }
 
 }

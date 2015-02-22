@@ -53,7 +53,8 @@
             <LinearLayout
                 android:layout_width="260dp"
                 android:id="@+id/drawer_header"
-                android:background="@drawable/drawer_header_repeat"
+                android:background="@color/toolbar_color"
+
                 android:layout_height="80dp">
 
                 <TextView android:text="@string/features"

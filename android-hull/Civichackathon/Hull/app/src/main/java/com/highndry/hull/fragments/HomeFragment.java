@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
         mViewPager.setOffscreenPageLimit(3);
         mViewPager.setCurrentItem(0);
         tabs.setViewPager(mViewPager);
-        tabs.setIndicatorColor(getResources().getColor(R.color.blue_700));
+        tabs.setIndicatorColor(getResources().getColor(R.color.tab_select_color));
         tabs.setTextColor(getResources().getColor(R.color.white));
 
     }

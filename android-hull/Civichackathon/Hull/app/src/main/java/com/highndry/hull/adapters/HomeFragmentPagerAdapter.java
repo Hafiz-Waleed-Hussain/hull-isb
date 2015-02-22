@@ -21,18 +21,18 @@ import com.highndry.hull.fragments.FragmentTwo_;
  */
 public class HomeFragmentPagerAdapter extends FragmentStatePagerAdapter {
     Context mContext = null;
-    final int PAGE_COUNT = 4;
+    final int PAGE_COUNT = 3;
 
     private FragmentOne fragmentOne = new FragmentOne_();
     private FragmentTwo fragmentTwo= new FragmentTwo_();
     private FragmentThree fragmentThree= new FragmentThree_();
-    private FragmentFour fragmentFour= new FragmentFour_();
+    //private FragmentFour fragmentFour= new FragmentFour_();
 
 
     private static final int TAB_INDEX_ONE = 0;
     private static final int TAB_INDEX_TWO = 1;
     private static final int TAB_INDEX_THREE = 2;
-    private static final int TAB_INDEX_FOUR = 3;
+    //private static final int TAB_INDEX_FOUR = 3;
 
     public HomeFragmentPagerAdapter(Context context, FragmentManager mgr) {
         super(mgr);
@@ -55,8 +55,6 @@ public class HomeFragmentPagerAdapter extends FragmentStatePagerAdapter {
                 return fragmentTwo;
             case TAB_INDEX_THREE:
                 return fragmentThree;
-            case TAB_INDEX_FOUR:
-                return fragmentFour;
 
         }
         throw new IllegalStateException("No fragment at position " + arg0);
@@ -68,16 +66,13 @@ public class HomeFragmentPagerAdapter extends FragmentStatePagerAdapter {
         String tabLabel = null;
         switch (position) {
             case TAB_INDEX_ONE:
-                tabLabel = "Category 1";
+                tabLabel = "Near Me";
                 break;
             case TAB_INDEX_TWO:
-                tabLabel = "Category 2";
+                tabLabel = "Hottest";
                 break;
             case TAB_INDEX_THREE:
-                tabLabel = "Category 3";
-                break;
-            case TAB_INDEX_FOUR:
-                tabLabel = "Category 4";
+                tabLabel = "New";
                 break;
 
         }
