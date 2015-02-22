@@ -19,11 +19,13 @@
     [super viewDidLoad];
     
     
-    [PFFacebookUtils initializeFacebook];
+    
     // Do any additional setup after loading the view.
 
-    
+
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -41,9 +43,10 @@
 */
 
 - (IBAction)loginFacebook:(id)sender {
+    [PFFacebookUtils initializeFacebook];
     
     NSArray *permissions = @[@"public_profile", @"email", @"user_friends"];
-    
+
     [PFFacebookUtils logInWithPermissions:permissions block:^(PFUser *user, NSError *error) {
         if (!user) {
             NSLog(@"Uh oh. The user cancelled the Facebook login.");
@@ -62,8 +65,12 @@
                     user[@"xp"] = @(0);
                     user[@"level"] = @(0);
                     
+                    NSLog(@"user info: %@", result);
                     [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                         if(succeeded){
+                            
+                            NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+                            [def setObject:@(YES) forKey:@"loggedIn"];
                             
                             [self goToProfile];
                             
@@ -71,7 +78,7 @@
                             NSLog(@"Could not publish user to hull");
                         }
                     }];
-                    NSLog(@"user info: %@", result);
+                    
                 } else {
                     NSLog(@"Problem getting user info");
                 }

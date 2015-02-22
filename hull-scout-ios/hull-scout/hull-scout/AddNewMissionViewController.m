@@ -36,7 +36,7 @@
     PFObject *newMission  = [[PFObject alloc] initWithClassName:@"Mission"];
     newMission[@"title"] = self.titleField.text;
     newMission[@"category"]= [self.categories objectAtIndex:self.picker.selectedItem];
-    
+    newMission[@"user"] = [PFUser currentUser];
     CLLocationCoordinate2D loc = self.mapView.userLocation.location.coordinate;
     
     newMission[@"lat"] = @(loc.latitude);

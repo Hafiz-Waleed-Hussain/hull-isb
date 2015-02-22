@@ -12,6 +12,15 @@
 		505B91AA1A98C85400CBC00D /* AddNewMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B91A91A98C85400CBC00D /* AddNewMissionViewController.m */; };
 		50974EA11A99B15200D28833 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50974EA01A99B15200D28833 /* Social.framework */; };
 		50974EA41A99B17100D28833 /* ShareMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50974EA31A99B17100D28833 /* ShareMissionViewController.m */; };
+		50974EA71A99B36000D28833 /* AdvertiseCollabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50974EA61A99B36000D28833 /* AdvertiseCollabViewController.m */; };
+		50974EA91A99B76700D28833 /* Available_in_Google_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 50974EA81A99B76700D28833 /* Available_in_Google_Play.png */; };
+		50974EAC1A99B7CB00D28833 /* hal-collab.png in Resources */ = {isa = PBXBuildFile; fileRef = 50974EAB1A99B7CB00D28833 /* hal-collab.png */; };
+		50974EAE1A99B8B600D28833 /* hal-scout-trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 50974EAD1A99B8B600D28833 /* hal-scout-trans.png */; };
+		50974EB01A99BB8600D28833 /* add139.png in Resources */ = {isa = PBXBuildFile; fileRef = 50974EAF1A99BB8600D28833 /* add139.png */; };
+		50974EB41A99C2CA00D28833 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50974EB31A99C2CA00D28833 /* AsyncImageView.m */; };
+		50974EB61A99D5E100D28833 /* MissionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50974EB51A99D5E100D28833 /* MissionCell.xib */; };
+		50974EB81A99D63300D28833 /* quote.png in Resources */ = {isa = PBXBuildFile; fileRef = 50974EB71A99D63300D28833 /* quote.png */; };
+		50974EBB1A99DAD200D28833 /* MissionCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50974EBA1A99DAD200D28833 /* MissionCellTableViewCell.m */; };
 		50CEB5BC1A988D5700C920AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CEB5BB1A988D5700C920AA /* main.m */; };
 		50CEB5BF1A988D5800C920AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CEB5BE1A988D5700C920AA /* AppDelegate.m */; };
 		50CEB5C51A988D5800C920AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CEB5C31A988D5800C920AA /* Main.storyboard */; };
@@ -55,6 +64,18 @@
 		50974EA01A99B15200D28833 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		50974EA21A99B17100D28833 /* ShareMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareMissionViewController.h; sourceTree = "<group>"; };
 		50974EA31A99B17100D28833 /* ShareMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareMissionViewController.m; sourceTree = "<group>"; };
+		50974EA51A99B36000D28833 /* AdvertiseCollabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiseCollabViewController.h; sourceTree = "<group>"; };
+		50974EA61A99B36000D28833 /* AdvertiseCollabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseCollabViewController.m; sourceTree = "<group>"; };
+		50974EA81A99B76700D28833 /* Available_in_Google_Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Available_in_Google_Play.png; sourceTree = "<group>"; };
+		50974EAB1A99B7CB00D28833 /* hal-collab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hal-collab.png"; sourceTree = "<group>"; };
+		50974EAD1A99B8B600D28833 /* hal-scout-trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hal-scout-trans.png"; sourceTree = "<group>"; };
+		50974EAF1A99BB8600D28833 /* add139.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add139.png; sourceTree = "<group>"; };
+		50974EB21A99C2CA00D28833 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		50974EB31A99C2CA00D28833 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		50974EB51A99D5E100D28833 /* MissionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MissionCell.xib; sourceTree = "<group>"; };
+		50974EB71A99D63300D28833 /* quote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quote.png; sourceTree = "<group>"; };
+		50974EB91A99DAD200D28833 /* MissionCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionCellTableViewCell.h; sourceTree = "<group>"; };
+		50974EBA1A99DAD200D28833 /* MissionCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionCellTableViewCell.m; sourceTree = "<group>"; };
 		50CEB5B61A988D5700C920AA /* hull-scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hull-scout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CEB5BA1A988D5700C920AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50CEB5BB1A988D5700C920AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,9 +141,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50974EB11A99C2CA00D28833 /* AsyncImageView */ = {
+			isa = PBXGroup;
+			children = (
+				50974EB21A99C2CA00D28833 /* AsyncImageView.h */,
+				50974EB31A99C2CA00D28833 /* AsyncImageView.m */,
+			);
+			path = AsyncImageView;
+			sourceTree = "<group>";
+		};
 		50CEB5AD1A988D5700C920AA = {
 			isa = PBXGroup;
 			children = (
+				50974EAD1A99B8B600D28833 /* hal-scout-trans.png */,
+				50974EAB1A99B7CB00D28833 /* hal-collab.png */,
+				50974EA81A99B76700D28833 /* Available_in_Google_Play.png */,
+				50974EAF1A99BB8600D28833 /* add139.png */,
+				50974EB71A99D63300D28833 /* quote.png */,
+				50974EB11A99C2CA00D28833 /* AsyncImageView */,
 				50CEB5FF1A98AA7700C920AA /* Frameworks */,
 				50CEB5B81A988D5700C920AA /* hull-scout */,
 				50CEB5D21A988D5800C920AA /* hull-scoutTests */,
@@ -151,6 +187,7 @@
 				50CEB5C61A988D5800C920AA /* Images.xcassets */,
 				50CEB5C81A988D5800C920AA /* LaunchScreen.xib */,
 				50CEB5B91A988D5700C920AA /* Supporting Files */,
+				50974EB51A99D5E100D28833 /* MissionCell.xib */,
 			);
 			path = "hull-scout";
 			sourceTree = "<group>";
@@ -192,6 +229,10 @@
 				505B91A91A98C85400CBC00D /* AddNewMissionViewController.m */,
 				50974EA21A99B17100D28833 /* ShareMissionViewController.h */,
 				50974EA31A99B17100D28833 /* ShareMissionViewController.m */,
+				50974EA51A99B36000D28833 /* AdvertiseCollabViewController.h */,
+				50974EA61A99B36000D28833 /* AdvertiseCollabViewController.m */,
+				50974EB91A99DAD200D28833 /* MissionCellTableViewCell.h */,
+				50974EBA1A99DAD200D28833 /* MissionCellTableViewCell.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -302,7 +343,13 @@
 			files = (
 				50CEB5C51A988D5800C920AA /* Main.storyboard in Resources */,
 				50CEB5CA1A988D5800C920AA /* LaunchScreen.xib in Resources */,
+				50974EB61A99D5E100D28833 /* MissionCell.xib in Resources */,
 				50CEB5C71A988D5800C920AA /* Images.xcassets in Resources */,
+				50974EA91A99B76700D28833 /* Available_in_Google_Play.png in Resources */,
+				50974EB81A99D63300D28833 /* quote.png in Resources */,
+				50974EB01A99BB8600D28833 /* add139.png in Resources */,
+				50974EAC1A99B7CB00D28833 /* hal-collab.png in Resources */,
+				50974EAE1A99B8B600D28833 /* hal-scout-trans.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,10 +368,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				505B91AA1A98C85400CBC00D /* AddNewMissionViewController.m in Sources */,
+				50974EB41A99C2CA00D28833 /* AsyncImageView.m in Sources */,
 				50CEB5BF1A988D5800C920AA /* AppDelegate.m in Sources */,
 				50CEB5BC1A988D5700C920AA /* main.m in Sources */,
+				50974EBB1A99DAD200D28833 /* MissionCellTableViewCell.m in Sources */,
 				50CEB5FC1A9899A700C920AA /* LoginViewController.m in Sources */,
 				50974EA41A99B17100D28833 /* ShareMissionViewController.m in Sources */,
+				50974EA71A99B36000D28833 /* AdvertiseCollabViewController.m in Sources */,
 				5022DB521A9999C900A09C7F /* AKPickerView.m in Sources */,
 				50CEB6021A98AA9100C920AA /* HomeProfileViewController.m in Sources */,
 			);

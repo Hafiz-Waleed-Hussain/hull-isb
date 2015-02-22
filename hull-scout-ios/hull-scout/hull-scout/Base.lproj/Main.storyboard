@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N6C-4E-LNx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NDY-xi-aIA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="NDY-xi-aIA" kind="relationship" relationship="rootViewController" id="nUJ-2B-s5b"/>
+                        <segue destination="hKM-YX-fPv" kind="relationship" relationship="rootViewController" id="HNo-k8-CYS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZO-el-q3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -65,12 +65,12 @@
                     <navigationItem key="navigationItem" id="RBc-2b-3PS"/>
                     <connections>
                         <outlet property="loginButton" destination="25v-kW-TFP" id="azA-xQ-es8"/>
-                        <segue destination="hKM-YX-fPv" kind="show" identifier="toProfile" id="cAV-wF-Mfr"/>
+                        <segue destination="N6C-4E-LNx" kind="presentation" identifier="toProfile" id="iAj-cx-gkV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZw-m4-LnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1226" y="388"/>
+            <point key="canvasLocation" x="-628.5" y="524"/>
         </scene>
         <!--HomeProfile-->
         <scene sceneID="R5J-0b-tJj">
@@ -84,38 +84,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1V-qN-S6Q">
-                                <rect key="frame" x="93" y="168" width="85" height="30"/>
-                                <state key="normal" title="Add mission">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome First_name last_name!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-r1-nJN">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="72" width="368" height="21"/>
+                                </variation>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dXL-za-4A6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="209" width="400" height="391"/>
+                                </variation>
                                 <connections>
-                                    <segue destination="51Z-PS-fXQ" kind="show" id="B3Y-J4-oJP"/>
+                                    <outlet property="dataSource" destination="hKM-YX-fPv" id="0Ux-lE-aks"/>
+                                    <outlet property="delegate" destination="hKM-YX-fPv" id="gib-zD-VFe"/>
                                 </connections>
-                            </button>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jE-4N-4dL">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="132" y="118" width="20" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created Missions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cec-qr-D1L">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="132" y="100" width="101" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOV-Lz-7iw">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="133" y="174" width="20" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rm2-jp-Swk" customClass="AsyncImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="101" width="100" height="100"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collaborated Missions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOo-le-jdA">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="133" y="154" width="127" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="l1V-qN-S6Q" secondAttribute="centerX" id="blv-8I-20C"/>
-                            <constraint firstAttribute="centerY" secondItem="l1V-qN-S6Q" secondAttribute="centerY" id="jiz-AY-lZq"/>
-                        </constraints>
                         <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="blv-8I-20C"/>
-                                <exclude reference="jiz-AY-lZq"/>
+                            <mask key="subviews">
+                                <exclude reference="gWp-r1-nJN"/>
+                                <exclude reference="dXL-za-4A6"/>
+                                <exclude reference="6jE-4N-4dL"/>
+                                <exclude reference="Cec-qr-D1L"/>
+                                <exclude reference="jOV-Lz-7iw"/>
+                                <exclude reference="Rm2-jp-Swk"/>
+                                <exclude reference="YOo-le-jdA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="blv-8I-20C"/>
-                                <include reference="jiz-AY-lZq"/>
+                            <mask key="subviews">
+                                <include reference="gWp-r1-nJN"/>
+                                <include reference="dXL-za-4A6"/>
+                                <include reference="6jE-4N-4dL"/>
+                                <include reference="Cec-qr-D1L"/>
+                                <include reference="jOV-Lz-7iw"/>
+                                <include reference="Rm2-jp-Swk"/>
+                                <include reference="YOo-le-jdA"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Fzv-DE-BuC"/>
+                    <connections>
+                        <outlet property="collabMissions" destination="jOV-Lz-7iw" id="Hrw-ow-uA0"/>
+                        <outlet property="createdMissions" destination="6jE-4N-4dL" id="bzt-QM-dsv"/>
+                        <outlet property="missionsTable" destination="dXL-za-4A6" id="Har-T3-h21"/>
+                        <outlet property="profileImageView" destination="Rm2-jp-Swk" id="iqO-yq-zbl"/>
+                        <outlet property="usernameWelcomeField" destination="gWp-r1-nJN" id="hey-cQ-vvJ"/>
+                        <segue destination="51Z-PS-fXQ" kind="show" identifier="addMission" id="Uul-Je-Cm5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6i-KJ-QFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2115" y="388"/>
+            <point key="canvasLocation" x="2131.5" y="364"/>
         </scene>
         <!--AddMission-->
         <scene sceneID="ga0-Xu-JK1">
@@ -259,7 +327,7 @@
                                     <rect key="frame" x="185" y="550" width="31" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="Qp0-kN-ndu" kind="presentation" id="5KY-SW-Xe2"/>
+                                    <segue destination="Qp0-kN-ndu" kind="presentation" identifier="advertiseCollab" id="5KY-SW-Xe2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDf-OZ-Inx">
@@ -268,11 +336,33 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="166" y="72" width="68" height="30"/>
+                                    <rect key="frame" x="166" y="298" width="68" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="sharePressed:" destination="Zzc-eY-frq" eventType="touchUpInside" id="yZ7-fA-Y68"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cee-i4-LOh">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="179" y="215" width="42" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Cee-i4-LOh"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Cee-i4-LOh"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfu-0v-7YJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -282,7 +372,7 @@
         <!--Advertisment-->
         <scene sceneID="jWJ-we-Ckc">
             <objects>
-                <viewController title="Advertisment" id="Qp0-kN-ndu" sceneMemberID="viewController">
+                <viewController title="Advertisment" id="Qp0-kN-ndu" customClass="AdvertiseCollabViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D2U-yB-JPQ"/>
                         <viewControllerLayoutGuide type="bottom" id="A14-lM-kC5"/>
@@ -291,26 +381,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Available_in_Google_Play.png" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-AF-chp">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Fzq-Dt-OVa"/>
+                                    <constraint firstAttribute="width" constant="161" id="gKm-Yr-gAr"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fzq-Dt-OVa"/>
+                                        <exclude reference="gKm-Yr-gAr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Fzq-Dt-OVa"/>
+                                        <include reference="gKm-Yr-gAr"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hal-collab.png" translatesAutoresizingMaskIntoConstraints="NO" id="3hg-GG-CgF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="CHv-Pq-lzC"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CHv-Pq-lzC"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="CHv-Pq-lzC"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwk-zR-jgW">
                                 <rect key="frame" x="57" y="138" width="40" height="30"/>
-                                <state key="normal" title="Close">
+                                <state key="normal" title="Home">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="180" y="285" width="40" height="30"/>
-                                </variation>
+                                <connections>
+                                    <action selector="closeThisShit:" destination="Qp0-kN-ndu" eventType="touchUpInside" id="ztv-LW-CIN"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join Hull collab" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcC-eG-uLr">
-                                <rect key="frame" x="27" y="109" width="118" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="256" width="118" height="21"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7gB-AF-chp" firstAttribute="centerX" secondItem="Jwk-zR-jgW" secondAttribute="centerX" id="8d2-TV-gKX"/>
+                            <constraint firstItem="3hg-GG-CgF" firstAttribute="centerX" secondItem="vJZ-pZ-SaD" secondAttribute="centerX" id="EeG-QA-4jH"/>
+                            <constraint firstItem="3hg-GG-CgF" firstAttribute="leading" secondItem="Jwk-zR-jgW" secondAttribute="leading" id="JWs-3s-VGg"/>
+                            <constraint firstItem="3hg-GG-CgF" firstAttribute="leading" secondItem="vJZ-pZ-SaD" secondAttribute="leadingMargin" constant="64" id="bT6-h9-oa3"/>
+                            <constraint firstItem="3hg-GG-CgF" firstAttribute="trailing" secondItem="Jwk-zR-jgW" secondAttribute="trailing" id="dRp-Ol-W9z"/>
+                            <constraint firstItem="Jwk-zR-jgW" firstAttribute="top" secondItem="7gB-AF-chp" secondAttribute="bottom" constant="8" symbolic="YES" id="jH2-fl-38z"/>
+                            <constraint firstItem="7gB-AF-chp" firstAttribute="top" secondItem="3hg-GG-CgF" secondAttribute="bottom" constant="8" symbolic="YES" id="p9w-Yy-ntb"/>
+                            <constraint firstItem="3hg-GG-CgF" firstAttribute="top" secondItem="D2U-yB-JPQ" secondAttribute="bottom" constant="8" symbolic="YES" id="v32-6F-aW9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7gB-AF-chp"/>
+                                <exclude reference="3hg-GG-CgF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="EeG-QA-4jH"/>
+                                <exclude reference="JWs-3s-VGg"/>
+                                <exclude reference="bT6-h9-oa3"/>
+                                <exclude reference="dRp-Ol-W9z"/>
+                                <exclude reference="v32-6F-aW9"/>
+                                <exclude reference="8d2-TV-gKX"/>
+                                <exclude reference="p9w-Yy-ntb"/>
+                                <exclude reference="jH2-fl-38z"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7gB-AF-chp"/>
+                                <include reference="3hg-GG-CgF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EeG-QA-4jH"/>
+                                <include reference="JWs-3s-VGg"/>
+                                <include reference="bT6-h9-oa3"/>
+                                <include reference="dRp-Ol-W9z"/>
+                                <include reference="v32-6F-aW9"/>
+                                <include reference="8d2-TV-gKX"/>
+                                <include reference="p9w-Yy-ntb"/>
+                                <include reference="jH2-fl-38z"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H82-Ak-qtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,4 +476,8 @@
             <point key="canvasLocation" x="5538" y="388"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Available_in_Google_Play.png" width="640" height="225"/>
+        <image name="hal-collab.png" width="512" height="512"/>
+    </resources>
 </document>
