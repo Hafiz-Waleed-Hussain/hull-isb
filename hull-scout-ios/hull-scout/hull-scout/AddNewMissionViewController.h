@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AddNewMissionViewController : UIViewController
+#import <Parse/Parse.h>
+#import "AKPickerView.h"
+@interface AddNewMissionViewController : UIViewController<AKPickerViewDataSource, AKPickerViewDelegate, CLLocationManagerDelegate> {
+    PFUser *currentUser;
+    CLLocationManager *locationManager;
+    
+}
 
 @end

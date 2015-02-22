@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
+//    
     [Parse enableLocalDatastore];
     
     // Initialize Parse.
@@ -29,9 +29,9 @@
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
-    [PFFacebookUtils initializeFacebook];
-    
+//
+//    
+//
     return YES;
 }
 

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5022DB521A9999C900A09C7F /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5022DB511A9999C900A09C7F /* AKPickerView.m */; };
 		505B91A71A98C47D00CBC00D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505B91A61A98C47D00CBC00D /* MapKit.framework */; };
 		505B91AA1A98C85400CBC00D /* AddNewMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B91A91A98C85400CBC00D /* AddNewMissionViewController.m */; };
+		50974EA11A99B15200D28833 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50974EA01A99B15200D28833 /* Social.framework */; };
+		50974EA41A99B17100D28833 /* ShareMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50974EA31A99B17100D28833 /* ShareMissionViewController.m */; };
 		50CEB5BC1A988D5700C920AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CEB5BB1A988D5700C920AA /* main.m */; };
 		50CEB5BF1A988D5800C920AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CEB5BE1A988D5700C920AA /* AppDelegate.m */; };
 		50CEB5C51A988D5800C920AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CEB5C31A988D5800C920AA /* Main.storyboard */; };
@@ -44,9 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5022DB501A9999C900A09C7F /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
+		5022DB511A9999C900A09C7F /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
 		505B91A61A98C47D00CBC00D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		505B91A81A98C85400CBC00D /* AddNewMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewMissionViewController.h; sourceTree = "<group>"; };
 		505B91A91A98C85400CBC00D /* AddNewMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewMissionViewController.m; sourceTree = "<group>"; };
+		50974EA01A99B15200D28833 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		50974EA21A99B17100D28833 /* ShareMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareMissionViewController.h; sourceTree = "<group>"; };
+		50974EA31A99B17100D28833 /* ShareMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareMissionViewController.m; sourceTree = "<group>"; };
 		50CEB5B61A988D5700C920AA /* hull-scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hull-scout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CEB5BA1A988D5700C920AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50CEB5BB1A988D5700C920AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50974EA11A99B15200D28833 /* Social.framework in Frameworks */,
 				505B91A71A98C47D00CBC00D /* MapKit.framework in Frameworks */,
 				50CEB5FE1A989B9A00C920AA /* ParseFacebookUtils.framework in Frameworks */,
 				50CEB5F91A9898C700C920AA /* libsqlite3.dylib in Frameworks */,
@@ -133,6 +142,8 @@
 		50CEB5B81A988D5700C920AA /* hull-scout */ = {
 			isa = PBXGroup;
 			children = (
+				5022DB501A9999C900A09C7F /* AKPickerView.h */,
+				5022DB511A9999C900A09C7F /* AKPickerView.m */,
 				50CEB5DF1A9892ED00C920AA /* View Controllers */,
 				50CEB5BD1A988D5700C920AA /* AppDelegate.h */,
 				50CEB5BE1A988D5700C920AA /* AppDelegate.m */,
@@ -179,6 +190,8 @@
 				50CEB6011A98AA9100C920AA /* HomeProfileViewController.m */,
 				505B91A81A98C85400CBC00D /* AddNewMissionViewController.h */,
 				505B91A91A98C85400CBC00D /* AddNewMissionViewController.m */,
+				50974EA21A99B17100D28833 /* ShareMissionViewController.h */,
+				50974EA31A99B17100D28833 /* ShareMissionViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -186,6 +199,7 @@
 		50CEB5FF1A98AA7700C920AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50974EA01A99B15200D28833 /* Social.framework */,
 				505B91A61A98C47D00CBC00D /* MapKit.framework */,
 				50CEB5FD1A989B9A00C920AA /* ParseFacebookUtils.framework */,
 				50CEB5F81A9898C700C920AA /* libsqlite3.dylib */,
@@ -254,6 +268,7 @@
 				TargetAttributes = {
 					50CEB5B51A988D5700C920AA = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = Q5SFELAH9E;
 					};
 					50CEB5CE1A988D5800C920AA = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -309,6 +324,8 @@
 				50CEB5BF1A988D5800C920AA /* AppDelegate.m in Sources */,
 				50CEB5BC1A988D5700C920AA /* main.m in Sources */,
 				50CEB5FC1A9899A700C920AA /* LoginViewController.m in Sources */,
+				50974EA41A99B17100D28833 /* ShareMissionViewController.m in Sources */,
+				5022DB521A9999C900A09C7F /* AKPickerView.m in Sources */,
 				50CEB6021A98AA9100C920AA /* HomeProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zaki  Shaheen (6N95VC7EZ3)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/debuggerman/Documents/FacebookSDK,
@@ -447,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zaki  Shaheen (6N95VC7EZ3)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/debuggerman/Documents/FacebookSDK,
