@@ -11,6 +11,8 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "AsyncImageView.h"
 #import <Parse/Parse.h>
+#import "MissionCellTableViewCell.h"
+
 @interface HomeProfileViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *usernameWelcomeField;
 @property (weak, nonatomic) IBOutlet UILabel *createdMissions;
@@ -29,8 +31,8 @@
     PFUser *currentUser  = [PFUser currentUser];
     
     self.usernameWelcomeField.text = [NSString stringWithFormat:@"Welcome %@!", currentUser[@"name"]];
-    self.createdMissions.text = @"0";
-    self.collabMissions.text = @"0";
+    self.createdMissions.text = @"5";
+    self.collabMissions.text = @"9";
     
 
     
@@ -95,14 +97,11 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"missionCard"];
+    MissionCellTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"missionCard"];
     
     if (!cell) {
         
-        [[NSBundle mainBundle] loadNibNamed:@"MissionCell" owner:nil options:nil];
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                                       reuseIdentifier:@"missionCard"];
+        cell = (MissionCellTableViewCell*)[[[NSBundle mainBundle] loadNibNamed:@"MissionCell" owner:nil options:nil] objectAtIndex:0];
         
         
         
@@ -110,11 +109,25 @@
     
     PFObject *o  = [self.mymissions objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = o[@"title"];
-    cell.detailTextLabel.text = o[@"desciption"];
+    cell.titleLabel.text = o[@"title"];
+    cell.categoryLabel.text = o[@"category"];
+    cell.RSVPLabel.text = [NSString stringWithFormat:@"%2d",rand() % 25];
     
+    
+    NSArray *locations = @[@"Commercial Centre,Satellite Town, Islamabad",
+                           @"House No.6A,St.54/A,F-7/4",
+                           @"# 19,ST # 28,F-6/1", @"H.No.13,Kaghan, Road,Near Church,F-8/3",
+                           @"House #13,Street #31,F-7/1",
+                           @"House No.23,Street 25,F-8/2"];
+    
+    int locIndex = rand() % 5;
+    cell.addressLabel.text = [locations objectAtIndex:locIndex];
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"My missions";
 }
 /*
 #pragma mark - Navigation

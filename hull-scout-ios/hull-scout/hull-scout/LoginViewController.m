@@ -18,8 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
+    [PFFacebookUtils initializeFacebook];
     // Do any additional setup after loading the view.
 
 
@@ -43,7 +42,7 @@
 */
 
 - (IBAction)loginFacebook:(id)sender {
-    [PFFacebookUtils initializeFacebook];
+
     
     NSArray *permissions = @[@"public_profile", @"email", @"user_friends"];
 

@@ -185,10 +185,10 @@
             </objects>
             <point key="canvasLocation" x="2131.5" y="364"/>
         </scene>
-        <!--AddMission-->
+        <!--New Mission-->
         <scene sceneID="ga0-Xu-JK1">
             <objects>
-                <viewController title="AddMission" id="51Z-PS-fXQ" customClass="AddNewMissionViewController" sceneMemberID="viewController">
+                <viewController title="New Mission" id="51Z-PS-fXQ" customClass="AddNewMissionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IB5-eq-dXO"/>
                         <viewControllerLayoutGuide type="bottom" id="fLb-fm-Tas"/>
@@ -221,18 +221,32 @@
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uba-89-MIP" customClass="AKPickerView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="273" width="400" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="5bl-7f-3n6"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5bl-7f-3n6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5bl-7f-3n6"/>
+                                    </mask>
                                 </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Uba-89-MIP" secondAttribute="centerY" constant="-4" id="1fG-Ai-nwo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vob-y7-zXN" secondAttribute="trailing" constant="-16" id="3eQ-Wg-KyI"/>
                             <constraint firstItem="Skn-wa-QhM" firstAttribute="leading" secondItem="4sD-xk-8QR" secondAttribute="leadingMargin" id="3tx-pa-bOJ"/>
+                            <constraint firstItem="Uba-89-MIP" firstAttribute="top" secondItem="IB5-eq-dXO" secondAttribute="bottom" constant="209" id="8vf-eJ-VUb"/>
                             <constraint firstItem="Skn-wa-QhM" firstAttribute="trailing" secondItem="4sD-xk-8QR" secondAttribute="trailingMargin" id="BAo-ZP-uR7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uba-89-MIP" secondAttribute="trailing" constant="-16" id="Dum-jX-cqS"/>
                             <constraint firstItem="Skn-wa-QhM" firstAttribute="top" secondItem="IB5-eq-dXO" secondAttribute="bottom" constant="23" id="M9K-Ib-2WM"/>
                             <constraint firstItem="vob-y7-zXN" firstAttribute="top" secondItem="Skn-wa-QhM" secondAttribute="bottom" constant="20" id="cq8-wm-b5o"/>
+                            <constraint firstItem="Uba-89-MIP" firstAttribute="leading" secondItem="4sD-xk-8QR" secondAttribute="leadingMargin" constant="-16" id="hDl-2P-Ovg"/>
                             <constraint firstItem="vob-y7-zXN" firstAttribute="leading" secondItem="4sD-xk-8QR" secondAttribute="leadingMargin" constant="-16" id="lNi-Gj-3TM"/>
                         </constraints>
                         <variation key="default">
@@ -248,6 +262,10 @@
                                 <exclude reference="3eQ-Wg-KyI"/>
                                 <exclude reference="cq8-wm-b5o"/>
                                 <exclude reference="lNi-Gj-3TM"/>
+                                <exclude reference="1fG-Ai-nwo"/>
+                                <exclude reference="8vf-eJ-VUb"/>
+                                <exclude reference="Dum-jX-cqS"/>
+                                <exclude reference="hDl-2P-Ovg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -263,6 +281,10 @@
                                 <include reference="3eQ-Wg-KyI"/>
                                 <include reference="cq8-wm-b5o"/>
                                 <include reference="lNi-Gj-3TM"/>
+                                <include reference="1fG-Ai-nwo"/>
+                                <include reference="8vf-eJ-VUb"/>
+                                <include reference="Dum-jX-cqS"/>
+                                <include reference="hDl-2P-Ovg"/>
                             </mask>
                         </variation>
                     </view>
